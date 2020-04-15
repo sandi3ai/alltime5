@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Rent a car">
+    <meta name="description" content="All time 5 v košarki">
     <meta name="author" content="Aleksander Podržaj">
 
-    <title>Rent a car</title>
+    <title>All-time 5</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
                         <a class="nav-link js-scroll-trigger" href="#projects">Players</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#signup">Add a player</a>
+                        <a class="nav-link js-scroll-trigger" href="#add">Add a player</a>
                     </li>
                 </ul>
             </div>
@@ -61,7 +61,64 @@
         </div>
     </header>
 
-    <!-- Picks Section / bootstrap: about section / starting 5-->
+    <section id="pick" class="picks-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card py-4 h-100">
+                        <tr>
+                            <img src="img/AllenIverson.jfif">
+                            <td>Allen Iverson</td>,
+                            <td>Philadelphia 76ers</td>,
+                            <td>PG</td>
+                        </tr>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card py-4 h-100">
+                        <tr>
+                            <img src="img/KobeBryant.jpg">
+                            <td>Kobe Bryant</td>,
+                            <td>Los Angeles Lakers</td>,
+                            <td>SG</td>
+                        </tr>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card py-4 h-100">
+                        <tr>
+                            <img src="img/KobeBryant.jpg">
+                            <td>Kobe Bryant</td>,
+                            <td>Los Angeles Lakers</td>,
+                            <td>SG</td>
+                        </tr>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card py-4 h-100">
+                        <tr>
+                            <img src="img/KobeBryant.jpg">
+                            <td>Kobe Bryant</td>,
+                            <td>Los Angeles Lakers</td>,
+                            <td>SG</td>
+                        </tr>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card py-4 h-100">
+                        <tr>
+                            <img src="img/KobeBryant.jpg">
+                            <td>Kobe Bryant</td>,
+                            <td>Los Angeles Lakers</td>,
+                            <td>SG</td>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Picks Section / bootstrap: picks section / starting 5
     <section id="pick" class="about-section text-center">
         <div class="container">
             <div class="row">
@@ -96,17 +153,17 @@
                 <div class="col-md-2 mb-2 mb-md-1">
                     <div class="card py-3 h-100">
                         <div class="card-body text-center">
-                            <img src="img/bg-masthead.jpg">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    -->
 
 
 
-    <!-- Projects Section -->
+    <!-- List of players section  -->
     <section id="projects" class="projects-section bg-light">
         <div class="container">
 
@@ -162,22 +219,18 @@
         </div>
     </section>
 
-    <!-- Signup Section -->
-    <section id="signup" class="signup-section">
+    <!-- Add a player Section -->
+    <section id="add" class="add-section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-lg-8 mx-auto text-center">
-
-                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                    <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-
-                    <form class="form-inline d-flex">
-                        <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-                        <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-                    </form>
-
-                </div>
-            </div>
+            <h2 class="text-white mb-5">If you didnt find the player you wanted, add him yourself</h2>
+            <form class="form-inline d-flex">
+                <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputName" placeholder="Enter first name..."></br>
+                <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputSurname" placeholder="Enter last name..."></br>
+                <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputTeam" placeholder="Enter team name..."></br>
+                <input type="number" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputPosition" placeholder="Select player position..."></br>
+                <input type="form" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputImage" placeholder="Input image..."></br>
+                <button type="submit" class="btn btn-primary mx-auto">SUBMIT BTN</button>
+            </form>
         </div>
     </section>
 
