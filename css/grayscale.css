@@ -145,6 +145,8 @@
     text-transform: uppercase;
     letter-spacing: .15rem;
     border: 0;
+    margin: 2rem;
+    margin-left: 5rem;
 }
 
 .btn-primary {
@@ -267,4 +269,8 @@ img {
 .form-control {
     width: 50%;
     margin: 1rem;
+}
+
+#succesInput {
+    color: green;
 }

@@ -11,13 +11,12 @@
         $position = $_POST['position'];
         $image = $_POST['image'];
         //insert to db
-        $sql = "INSERT INTO players (name, team, position, image)
-            VALUES ('$name', '$team', '$position', '$image')";
+        $sql = "INSERT INTO `player`(`name`, `team`, `position`, `image`) VALUES ('$name', '$team', '$position', '$image')";
 
         if ($conn->query($sql) === true) {
-            echo json_encode("New record created successfully");
+            echo json_encode("New player successfully added to database");
         } else {
-            echo json_encode('"Error: " . $sql . "<br>" . $conn->error');
+            echo json_encode('"Error: " . $sql . "<br>" . $conn->error - error na insert.php');
         }
     }
 
