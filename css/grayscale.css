@@ -110,8 +110,8 @@
 }
 
 .masthead h2 {
-    max-width: 20rem;
-    font-size: 1rem;
+    max-width: 10rem;
+    font-size: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -266,10 +266,14 @@ img {
     max-height: 100%;
 }
 
-.form-control {
-    width: 50%;
+
+.container-side {
+    padding-right: 30%;
+}
+.form-control, .custom-file {
     margin: 1rem;
 }
+
 
 #succesInput {
     color: green;

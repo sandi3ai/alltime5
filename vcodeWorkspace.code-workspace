@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": ".git"
+		},
+		{
+			"path": "css"
+		},
+		{
+			"path": "img"
+		},
+		{
+			"path": "js"
+		},
+		{
+			"path": "scss"
+		},
+		{
+			"path": "vendor"
+		}
+	],
+	"settings": {
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true
+	}
+}
