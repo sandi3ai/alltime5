@@ -23,7 +23,7 @@
 #mainNav .navbar-brand {
     color: #161616;
     font-weight: 700;
-    padding: .9rem 0;
+    padding: 0.9rem 0;
 }
 
 #mainNav .navbar-nav .nav-item:hover {
@@ -47,7 +47,7 @@
         transition: background-color 0.3s ease-in-out;
     }
     #mainNav .navbar-brand {
-        padding: .5rem 0;
+        padding: 0.5rem 0;
         color: rgba(255, 255, 255, 0.5);
     }
     #mainNav .nav-link {
@@ -91,7 +91,7 @@
     height: auto;
     min-height: 35rem;
     padding: 15rem 0;
-    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.486) 75%, rgb(100, 100, 100) 100%), url("../img/mercedesNaslovna.jpg");
+    background: linear-gradient( to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.486) 75%, rgb(100, 100, 100) 100%), url("../img/mercedesNaslovna.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -99,11 +99,11 @@
 }
 
 .masthead h1 {
-    font-family: 'Varela Round';
+    font-family: "Varela Round";
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.952), rgba(255, 255, 255, 0));
+    background: -webkit-linear-gradient( rgba(255, 255, 255, 0.952), rgba(255, 255, 255, 0));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: transparent;
@@ -139,11 +139,11 @@
 
 .btn {
     box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-    padding: 1.25rem 2rem;
-    font-family: 'Varela Round';
+    padding: 1rem 1.5rem;
+    font-family: "Varela Round";
     font-size: 80%;
     text-transform: uppercase;
-    letter-spacing: .15rem;
+    letter-spacing: 0.15rem;
     border: 0;
     margin: 2rem;
     margin-left: 5rem;
@@ -168,7 +168,7 @@
 
 .picks-section {
     padding-top: 2rem;
-    background: linear-gradient(to bottom, rgb(100, 100, 100) 0%, rgba(200, 200, 200) 75%, rgb(200, 200, 200) 100%);
+    background: linear-gradient( to bottom, rgb(100, 100, 100) 0%, rgba(200, 200, 200) 75%, rgb(200, 200, 200) 100%);
 }
 
 .picks-section p {
@@ -176,7 +176,7 @@
 }
 
 .players-section {
-    padding: 10rem 0;
+    padding: 1rem;
 }
 
 .players-section .featured-text {
@@ -201,14 +201,14 @@
     }
     .players-section .project-text hr {
         border-color: rgb(129, 0, 0);
-        border-width: .25rem;
+        border-width: 0.25rem;
         width: 30%;
     }
 }
 
 .add-section {
     padding: 10rem 0;
-    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/footerBackground.jpg");
+    background: linear-gradient( to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/footerBackground.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -219,15 +219,14 @@
     box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
     padding: 1.25rem 1rem;
     height: auto;
-    font-family: 'Varela Round';
+    font-family: "Varela Round";
     font-size: 80%;
-    letter-spacing: 0.10rem;
+    letter-spacing: 0.1rem;
     border: 0;
 }
 
-
 body {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     letter-spacing: 0.0625em;
 }
 
@@ -266,15 +265,23 @@ img {
     max-height: 100%;
 }
 
-
 .container-side {
     padding-right: 30%;
 }
-.form-control, .custom-file {
+
+.form-control,
+.custom-file {
     margin: 1rem;
 }
 
-
 #succesInput {
     color: green;
+}
+
+#playersH1 {
+    margin-top: 5rem;
+}
+
+#uploadBtn {
+    margin: 0.5rem 0;
 }

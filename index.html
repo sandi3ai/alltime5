@@ -44,7 +44,7 @@
                         <a class="nav-link js-scroll-trigger" href="#pick">Your starting 5</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#players">Players</a>
+                        <a class="nav-link js-scroll-trigger" href="#playersContainer">Players</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#add">Add a player</a>
@@ -127,21 +127,14 @@
 
 
     <!-- List of players section  -->
-    <section id="players" class="players-section bg-light">
-        <div class="container">
-            <div class="card" style="width: 18rem;">
-                <img src="#" class="card-img-top" alt="" id="image">
-                <div class="card-body">
-                    <p class="card-text">
-                        <p id="name"></p>
-                        <p id="position"></p>
-                        <p id="team"></p>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
+    <section class="players-section bg-light">
+        <h1 id="playersH1">List of players:</h1>
+        </br>
+        <div class="row row-cols-1 row-cols-md-3" id="playersContainer">
+            <!--vsebina seznama dodana z myscript.js-->
+            <div>
+    </section>
 
 
     <!-- Add a player Section -->
