@@ -36,7 +36,9 @@ $(document).ready(function() {
 
 function appendAllPlayersToDivs() {
     // v sekcijo players vstavi podatke z igralci
-    var players = "";
+
+    document.getElementById("playersContainer").innerHTML = "";
+    prev = "";
     $.ajax({
         type: "post",
         url: "fetch.php",
@@ -44,7 +46,37 @@ function appendAllPlayersToDivs() {
         dataType: "json",
         success: function(data) {
             if (data.length > 0) {
-                $.each(data, function(i, item) {
+                $.each(data, function(i) {
+                    if (data[i].position != prev) {
+                        //če igralčeva pozicija ni enaka prejšnjemu igralcu izpišem blok z napisi pozicij:
+                        switch (data[i].position) {
+                            case "1":
+                                pripniIgralcem(
+                                    "<p id='positions'>Point guards <i style='font-size:24px' class='fas'>&#xf138;</i></p>"
+                                );
+                                break;
+                            case "2":
+                                pripniIgralcem(
+                                    "<p id='positions'>Shooting guards <i style='font-size:24px' class='fas'>&#xf138;</i></p>"
+                                );
+                                break;
+                            case "3":
+                                pripniIgralcem(
+                                    "<p id='positions'>Small forwards <i style='font-size:24px' class='fas'>&#xf138;</i></p>"
+                                );
+                                break;
+                            case "4":
+                                pripniIgralcem(
+                                    "<p id='positions'>Power forwards <i style='font-size:24px' class='fas'>&#xf138;</i></p>"
+                                );
+                                break;
+                            case "5":
+                                pripniIgralcem(
+                                    "<p id='positions'>Centers <i style='font-size:24px' class='fas'>&#xf138;</i></p>"
+                                );
+                                break;
+                        }
+                    }
                     players =
                         "<div class='col mb-4'><div class='card flex-fill'> " +
                         "<img class='card-img-top' src='" +
@@ -58,7 +90,8 @@ function appendAllPlayersToDivs() {
                         "</br>position: " +
                         data[i].position +
                         " </p></div></div></div>";
-                    $("div#playersContainer").append(players);
+                    prev = data[i].position;
+                    pripniIgralcem(players);
                 });
             }
         },
@@ -67,4 +100,8 @@ function appendAllPlayersToDivs() {
             alert(thrownError);
         },
     });
+}
+
+function pripniIgralcem(string) {
+    $("div#playersContainer").append(string);
 }

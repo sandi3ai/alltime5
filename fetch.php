@@ -3,7 +3,7 @@
     
     checkConnection($conn);
 
-    $sql = "SELECT * FROM player";
+    $sql = "SELECT * FROM player ORDER BY position";
     $result = mysqli_query($conn, $sql);
     $jsonArray = array();
     if (mysqli_num_rows($result) > 0) {             //če obstajajo vrstice

@@ -154,7 +154,7 @@
 
 .btn-small {
     padding: 0.3rem;
-    margin: 0.3rem;
+    margin: 0 4 2 4rem;
     color: rgb(0, 207, 0);
 }
 
@@ -186,7 +186,7 @@
 
 .players-section {
     padding: 1rem;
-    background: linear-gradient( to bottom, rgb(200, 200, 200) 0%, rgb(240, 240, 240) 45%, rgb(200, 200, 200) 90%, rgb(80, 80, 80) 95%, rgb(0, 0, 0) 100%);
+    background: linear-gradient( to bottom, rgb(200, 200, 200) 0%, rgb(240, 240, 240) 45%, rgb(200, 200, 200) 92%, rgb(80, 80, 80) 97%, rgb(0, 0, 0) 100%);
 }
 
 .players-section .featured-text {
@@ -311,4 +311,15 @@ h5.card-title {
     /* imena igralcev */
     color: blue;
     font-size: medium;
+}
+
+p.card-text {
+    font-size: small;
+}
+
+p#positions {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-transform: uppercase;
+    font-weight: bolder;
 }
