@@ -29,8 +29,8 @@
 
  
                 //shrani sliko v mapo img z imenom 10.jpg (primer torej $playerID + . + koncnica slike)
-                $path = "/img" . $playerID . '.' . $extension;
-                move_uploaded_file($_FILES['image']['tmp_name'], './img/' . $playerID . '.' . $extension);
+                $path = "images/" . $playerID . '.' . $extension;
+                move_uploaded_file($_FILES['image']['tmp_name'], './images/' . $playerID . '.' . $extension);
 
                 $sql = sprintf("UPDATE player SET image='%s' WHERE id=%s", $path, $playerID);
                  if ($conn->query($sql) === true) {

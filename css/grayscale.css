@@ -145,8 +145,17 @@
     text-transform: uppercase;
     letter-spacing: 0.15rem;
     border: 0;
-    margin: 2rem;
-    margin-left: 5rem;
+    margin: 1rem 0rem;
+}
+
+.btn-secondary {
+    padding: 0.5rem;
+}
+
+.btn-small {
+    padding: 0.3rem;
+    margin: 0.3rem;
+    color: rgb(0, 207, 0);
 }
 
 .btn-primary {
@@ -177,6 +186,7 @@
 
 .players-section {
     padding: 1rem;
+    background: linear-gradient( to bottom, rgb(200, 200, 200) 0%, rgb(240, 240, 240) 45%, rgb(200, 200, 200) 90%, rgb(80, 80, 80) 95%, rgb(0, 0, 0) 100%);
 }
 
 .players-section .featured-text {
@@ -185,19 +195,19 @@
 
 @media (min-width: 992px) {
     .players-section .featured-text {
-        padding: 0 0 0 2rem;
+        padding: 0 0 0 1rem;
         border-left: 0.5rem solid rgb(129, 0, 0);
     }
 }
 
 .players-section .project-text {
-    padding: 3rem;
+    padding: 10rem;
     font-size: 90%;
 }
 
 @media (min-width: 992px) {
     .players-section .project-text {
-        padding: 5rem;
+        padding: 3rem;
     }
     .players-section .project-text hr {
         border-color: rgb(129, 0, 0);
@@ -257,7 +267,7 @@ footer {
 }
 
 .card-body {
-    margin-bottom: 1rem;
+    max-height: max-content;
 }
 
 img {
@@ -269,9 +279,8 @@ img {
     padding-right: 30%;
 }
 
-.form-control,
-.custom-file {
-    margin: 1rem;
+.form-control {
+    margin-top: 1rem;
 }
 
 #succesInput {
@@ -279,9 +288,27 @@ img {
 }
 
 #playersH1 {
-    margin-top: 5rem;
+    margin-top: 8rem;
+    text-align: center;
+    color: rgb(129, 0, 0);
 }
 
-#uploadBtn {
-    margin: 0.5rem 0;
+.card-img-top {
+    width: 100%;
+    height: 20rem;
+    max-width: 20rem;
+    object-fit: cover;
+}
+
+h3 {
+    margin-top: 1rem;
+    font-family: "Varela Round";
+    font-size: 1rem;
+    color: lightgray;
+}
+
+h5.card-title {
+    /* imena igralcev */
+    color: blue;
+    font-size: medium;
 }

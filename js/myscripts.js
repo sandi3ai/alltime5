@@ -1,39 +1,7 @@
 $(document).ready(function() {
     $("#succesInput").hide();
 
-    // v sekcijo players vstavi podatke z igralci
-    var players = "";
-    $.ajax({
-        type: "post",
-        url: "fetch.php",
-        data: {},
-        dataType: "json",
-        success: function(data) {
-            if (data.length > 0) {
-                $.each(data, function(i, item) {
-                    players +=
-                        "<div class='col mb-4'><div class='card'> " +
-                        "<img src='" +
-                        data[i].image +
-                        "' class='card-img-top' alt='alternative'>" +
-                        "<div class='card-body'><h5 class='card-title'>" +
-                        data[i].name +
-                        "</h5>" +
-                        "<p class='card-text'>" +
-                        data[i].team +
-                        "</br>position: " +
-                        data[i].position +
-                        " </p>" +
-                        "</div></div></div>";
-                });
-            }
-            $("div#playersContainer").append(players);
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
-        },
-    });
+    appendAllPlayersToDivs();
 
     //add a player - pošiljanje input podatkov na insert.php
     $("#addButton").click(function() {
@@ -60,34 +28,43 @@ $(document).ready(function() {
                 $("#inputPosition").val("");
                 $("#inputImage").val("");
                 $("#succesInput").show("slow");
+                appendAllPlayersToDivs();
             },
         });
     });
-    /*
-                    //add a player - pošiljanje input podatkov na insert.php
-                    $("#addButton").click(function() {
-                        var name = $("#inputName").val() + " " + $("#inputSurname").val();
-                                var team = $("#inputTeam").val();
-                                var position = $("#inputPosition").val();
-                                var image = $("#inputImage").val();
-                                console.log("Add Button clicked");
-
-                                vsebina = name + ", " + team + ", " + position + ", " + image;
-                                console.log("vsebina: " + vsebina);
-
-                        //Vnos iz forme preko ajaxa na php
-                        $.ajax({
-                            url: "insert.php",
-                            method: "POST",
-                            data: {
-                                name: name,
-                                team: team,
-                                position: position,
-                                image: image,
-                            },
-                            success: function() {
-                                //počistim input in izpišem succesInput
-                            },
-                        });
-                    });*/
 });
+
+function appendAllPlayersToDivs() {
+    // v sekcijo players vstavi podatke z igralci
+    var players = "";
+    $.ajax({
+        type: "post",
+        url: "fetch.php",
+        data: {},
+        dataType: "json",
+        success: function(data) {
+            if (data.length > 0) {
+                $.each(data, function(i, item) {
+                    players =
+                        "<div class='col mb-4'><div class='card flex-fill'> " +
+                        "<img class='card-img-top' src='" +
+                        data[i].image +
+                        "' class='card-img-top' alt='alternative'>" +
+                        "<div class='card-body'><button class='btn btn-small'>SELECT</button><h5 class='card-title'>" +
+                        data[i].name +
+                        "</h5>" +
+                        "<p class='card-text'>" +
+                        data[i].team +
+                        "</br>position: " +
+                        data[i].position +
+                        " </p></div></div></div>";
+                    $("div#playersContainer").append(players);
+                });
+            }
+        },
+        error: function(xhr, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+        },
+    });
+}

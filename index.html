@@ -66,6 +66,8 @@
     </header>
 
     <section id="pick" class="picks-section text-center">
+        <h1 id="playersH1">YOUR SELECTION:</h1>
+
         <div class="container">
             <div class="row">
                 <div class="col-sm">
@@ -129,9 +131,9 @@
     <!-- List of players section  -->
 
     <section class="players-section bg-light">
-        <h1 id="playersH1">List of players:</h1>
+        <h1 id="playersH1">LIST OF PLAYERS</h1>
         </br>
-        <div class="row row-cols-1 row-cols-md-3" id="playersContainer">
+        <div class="row row-cols-1 row-cols-md-3 d-flex" id="playersContainer">
             <!--vsebina seznama dodana z myscript.js-->
             <div>
     </section>
@@ -146,12 +148,59 @@
             <form>
                 <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputName" placeholder="Enter first name...">
                 <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputSurname" placeholder="Enter last name...">
-                <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputTeam" placeholder="Enter team name...">
-                <input type="number" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputPosition" placeholder="Select player position...">
+
+                <div class="form-group">
+                    <select class="form-control" id="inputTeam">
+                      <option selected>Choose team..</option>
+                      <option value="Atlanta Hawks">Atlanta Hawks</option>
+                      <option value="Boston Celtics">Boston Celtics</option>
+                      <option value="Brooklyn Nets">Brooklyn Nets</option>
+                      <option value="Charlote Hornets">Charlote Hornets</option>
+                      <option value="Chicago Bulls">Chicago Bulls</option>
+                      <option value="Cleveland Cavaliers">Cleveland Cavaliers</option>
+                      <option value="Dallas Mavericks">Dallas Mavericks</option>
+                      <option value="Denver Nuggets">Denver Nuggets</option>
+                      <option value="Detroit Pistons">Detroit Pistons</option>
+                      <option value="Golden State Warriors">Golden State Warriors</option>
+                      <option value="Houston Rockets">Houston Rockets</option>
+                      <option value="Indiana Pacers">Indiana Pacers</option>
+                      <option value="Los Angeles Clippers">Los Angeles Clippers</option>
+                      <option value="Los Angeles Lakers">Los Angeles Lakers</option>
+                      <option value="Memphis Grizzlies">Memphis Grizzlies</option>
+                      <option value="Miami Heat">Miami Heat</option>
+                      <option value="Milwaukee Bucks">Milwaukee Bucks</option>
+                      <option value="Minnesota Timberwolves">Minnesota Timberwolves</option>
+                      <option value="New Orleans Pelicans">New Orleans Pelicans</option>
+                      <option value="New York Knicks">New York Knicks</option>
+                      <option value="Oklahoma City Thunder">Oklahoma City Thunder</option>
+                      <option value="Orlando Magic">Orlando Magic</option>
+                      <option value="Philadelphia 76ers">Philadelphia 76ers</option>
+                      <option value="Phoenix Suns">Phoenix Suns</option>
+                      <option value="Portland Trail Blazers">Portland Trail Blazers</option>
+                      <option value="Sacramento Kings">Sacramento Kings</option>
+                      <option value="San Antonio Spurs">San Antonio Spurs</option>
+                      <option value="Toronto Raptors">Toronto Raptors</option>
+                      <option value="Utah Jazz">Utah Jazz</option>
+                      <option value="Washington Wizards">Washington Wizards</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select class="form-control" id="inputPosition">
+                      <option selected>Choose position..</option>
+                      <option value="1">1 - Point guard</option>
+                      <option value="2">2 - Shooting guard</option>
+                      <option value="3">3 - Small forward</option>
+                      <option value="4">4 - Power forward</option>
+                      <option value="5">5 - Center</option>
+                    </select>
+                </div>
+
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="inputImage" accept="image/*" required>
                     <label class="custom-file-label" for="inputImage">Choose file...</label>
                 </div>
+
 
                 <button type="button" id="addButton" class="btn btn-primary mx-auto">SUBMIT</button>
 
